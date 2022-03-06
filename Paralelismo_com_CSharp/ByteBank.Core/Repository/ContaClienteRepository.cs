@@ -1,18 +1,16 @@
-﻿using ByteBank.Core.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ByteBank.Core.Model;
 
 namespace ByteBank.Core.Repository
 {
-    public class ContaClienteRepository
+  public class ContaClienteRepository
+  {
+    public IEnumerable<ContaCliente> GetContaClientes()
     {
-        public IEnumerable<ContaCliente> GetContaClientes()
-        {
-            return new List<ContaCliente> {
-                new ContaCliente { NomeCliente = "Alice", Movimentacoes = new List<Movimento> {    new Movimento { Valor= -19, Tipo=TipoMovimento.RecargaCelular, Data=new DateTime(2013, 9, 7) },
+      return new List<ContaCliente> {
+                new ContaCliente { NomeCliente = "Alice", Movimentacoes = new List<Movimento> {
+                    new Movimento { Valor= -19, Tipo=TipoMovimento.RecargaCelular, Data=new DateTime(2013, 9, 7) },
                     new Movimento { Valor= 424, Tipo=TipoMovimento.Deposito, Data=new DateTime(2013, 11, 9) },
                     new Movimento { Valor= 830, Tipo=TipoMovimento.Transferencia, Data=new DateTime(2017, 2, 17) },
                     new Movimento { Valor= -178, Tipo=TipoMovimento.Saque, Data=new DateTime(2015, 1, 24) },
@@ -5121,6 +5119,6 @@ namespace ByteBank.Core.Repository
                     new Movimento { Valor= -14, Tipo=TipoMovimento.RecargaCelular, Data=new DateTime(2017, 4, 2) },
                 }, Investimento= 12646 }
             };
-        }
     }
+  }
 }
