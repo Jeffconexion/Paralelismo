@@ -1,0 +1,1 @@
+Vantagens e desvantagens entre aplicar threads, tasks, asyncAwait
