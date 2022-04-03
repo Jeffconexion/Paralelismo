@@ -1,0 +1,15 @@
+
+1) Download docker
+https://download.docker.com/win/stabl...
+
+2) Download SQL Server Management Studio
+https://docs.microsoft.com/pt-br/sql/...
+https://aka.ms/ssmsfullsetup
+
+3) Garantir que esteja executando containers Linux
+
+4) Baixar a última imagem estável do SQL Server para docker
+docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+5) Criar uma nova instância utilizando essa imagem
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=SenhaDoSA' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
